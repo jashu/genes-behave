@@ -25,7 +25,7 @@ MATLAB code for managing a breeding colony in an artificial selection experiment
 
 1. [FamilyTree](FamilyTree.m): Takes the above SubjectInfo data and saves a 'biograph' object that can be used to graph the family tree and compute degree of relationship between relatives.
 
-2. [Breeders](Breeders.m): Uses the 'biograph' object created in Step 1 to optimize breeding pairs to minimize inbreeding. The algorithm computes the shortest paths between every potential male-female pair in the genealogical graph and then selecting mating pairs with the largest degrees of separation (in essence, the set of pairs that results in the longest of the shortest paths). Suggested parings are returned in the following (m X 2) matrices:
+2. [Breeders](Breeders.m): Uses the 'biograph' object created in Step 1 to optimize breeding pairs to minimize inbreeding. The algorithm computes the shortest paths between every potential male-female pair in the genealogical graph and then uses [FiindMates](FindMates.m) to select the mating pairs with the largest degrees of separation (in essence, the set of pairs that results in the longest of the shortest paths). Suggested parings are returned in the following (m X 2) matrices:
   - *LESuggestedPairs* for the low-extreme line
   - *RBSuggestedPairs* for the randomly-bred line
   - *HESuggestedPairs* for the high-extreme line
