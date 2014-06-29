@@ -16,6 +16,7 @@ You must first update the genealogical database by running [FamilyTree](FamilyTr
   - *Sex*:
     - 0: Females
     - 1: Males
+    
 Optimal breeding pairs to minimize inbreeding are determined by computing the shortest paths between every potential male-female pair in the genealogical graph and then selecting mating pairs with the largest degrees of separation (in essence, the set of pairs that results in the longest of the shortest paths). Suggested parings are returned in the following (m X 2) matrices:
   - *LESuggestedPairs* for the low-extreme line
   - *RBSuggestedPairs* for the randomly-bred line
