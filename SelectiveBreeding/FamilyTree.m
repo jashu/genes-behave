@@ -10,16 +10,6 @@ Mother = Mother(BreederIndx);
 Sex = Sex(BreederIndx);
 Subject = Subject(BreederIndx);
 
-%Filter out Gen 5 for testing
-%GenIndx = find(Generation < 5);
-%Breeder = Breeder(GenIndx);
-%Father = Father(GenIndx);
-%Generation = Generation(GenIndx);
-%Line = Line(GenIndx);
-%Mother = Mother(GenIndx);
-%Sex = Sex(GenIndx);
-%Subject = Subject(GenIndx);
-
 %Create data structure for directed graph
 CMatrix = zeros(size(Subject));
 NodeIDs = num2str(Subject,'%5.3f');
