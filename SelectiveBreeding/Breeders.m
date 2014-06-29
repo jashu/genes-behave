@@ -4,7 +4,7 @@
 %generation.
 
 %Should only be performed once candidate breeders have been
-%determined and placed in the file SubjectInfo.
+%determined and labeled as such in the file SubjectInfo.
 
 %Should only be performed after 'FamilyTree' is run to create the
 %ColonyBioGraph object.
@@ -21,8 +21,9 @@ RBIndices=find(Line==0);
 LEIndices=find(Line==-1);
 MaleIndices=find(Sex==1);
 FemaleIndices=find(Sex==0);
-HEMales = Subject(intersect(MaleIndices,HEIndices));
-HEFemales = Subject(intersect(FemaleIndices,HEIndices));
+GenIndices=find(Generation==max(Generation));
+HEMales = Subject(intersect(GenIndices,(intersect(MaleIndices,HEIndices))));
+HEFemales = Subject(intersect(GenIndices,(intersect(FemaleIndices,HEIndices))));
 HERelations = zeros(size(HEMales,1),size(HEFemales,1));
 for m = 1:size(HEMales)
     for n = 1:size(HEFemales)
@@ -30,8 +31,8 @@ for m = 1:size(HEMales)
     end
 end
 
-LEMales = Subject(intersect(MaleIndices,LEIndices));
-LEFemales = Subject(intersect(FemaleIndices,LEIndices));
+LEMales = Subject(intersect(GenIndices,(intersect(MaleIndices,LEIndices))));
+LEFemales = Subject(intersect(GenIndices,(intersect(FemaleIndices,LEIndices))));
 LERelations = zeros(size(LEMales,1),size(LEFemales,1));
 for m = 1:size(LEMales)
     for n = 1:size(LEFemales)
@@ -39,8 +40,8 @@ for m = 1:size(LEMales)
     end
 end
 
-RBMales = Subject(intersect(MaleIndices,RBIndices));
-RBFemales = Subject(intersect(FemaleIndices,RBIndices));
+RBMales = Subject(intersect(GenIndices,(intersect(MaleIndices,RBIndices))));
+RBFemales = Subject(intersect(GenIndices,(intersect(FemaleIndices,RBIndices))));
 RBRelations = zeros(size(RBMales,1),size(RBFemales,1));
 for m = 1:size(RBMales)
     for n = 1:size(RBFemales)
