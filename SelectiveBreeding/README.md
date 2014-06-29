@@ -4,7 +4,7 @@ MATLAB code for managing a breeding colony in an artificial selection experiment
 ------------------------------------------------------------------------
 ***Requires the Bioinformatics Toolbox***
 
-**IMPORTANT:**You must first update the genealogical database by running [FamilyTree](FamilyTree.m) before running [Breeders](Breeders.m) to determine breeding pairs for the next generation. Both functions require you to have imported the following vectors from a data table and saved them as 'SubjectInfo.mat'. To facilitate importing, maintain the data for your colony in a table where each row represents a single animal with the following column headers:
+**IMPORTANT:** You must first update the genealogical database by running [FamilyTree](FamilyTree.m) before running [Breeders](Breeders.m) to determine breeding pairs for the next generation. Both functions require you to have imported the following vectors from a data table and saved them as 'SubjectInfo.mat'. To facilitate importing, maintain the data for your colony in a table where each row represents a single animal with the following column headers:
 - *Subjects*: Unique subject ID
 - *Generation*: Integer indicating to which generation the subject belongs
 - *Line*: Assumes you are breeding three lines, dummy-coded as follows:
