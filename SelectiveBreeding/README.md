@@ -2,7 +2,7 @@ Selective Breeding
 ============================
 MATLAB code for managing a breeding colony in an artificial selection experiment for behavioral extremes
 ------------------------------------------------------------------------
-***Requires the Bioinformatics Toolbox**
+***Requires the Bioinformatics Toolbox***
 
 You must first update the genealogical database by running [FamilyTree](FamilyTree.m) before running [Breeders](Breeders.m) to determine breeding pairs for the next generation:
 
